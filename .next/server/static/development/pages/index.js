@@ -2668,7 +2668,7 @@ const tableIcons = {
     ref: ref,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 29
     },
     __self: undefined
   }))),
@@ -2676,7 +2676,7 @@ const tableIcons = {
     ref: ref,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 30
     },
     __self: undefined
   }))),
@@ -2684,7 +2684,7 @@ const tableIcons = {
     ref: ref,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 31
     },
     __self: undefined
   }))),
@@ -2692,7 +2692,7 @@ const tableIcons = {
     ref: ref,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 32
     },
     __self: undefined
   }))),
@@ -2700,7 +2700,7 @@ const tableIcons = {
     ref: ref,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 33
     },
     __self: undefined
   }))),
@@ -2708,7 +2708,7 @@ const tableIcons = {
     ref: ref,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 34
     },
     __self: undefined
   }))),
@@ -2716,7 +2716,7 @@ const tableIcons = {
     ref: ref,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 35
     },
     __self: undefined
   }))),
@@ -2724,7 +2724,7 @@ const tableIcons = {
     ref: ref,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 36
     },
     __self: undefined
   }))),
@@ -2732,7 +2732,7 @@ const tableIcons = {
     ref: ref,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 37
     },
     __self: undefined
   }))),
@@ -2740,7 +2740,7 @@ const tableIcons = {
     ref: ref,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 38
     },
     __self: undefined
   }))),
@@ -2748,7 +2748,7 @@ const tableIcons = {
     ref: ref,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 39
     },
     __self: undefined
   }))),
@@ -2756,7 +2756,7 @@ const tableIcons = {
     ref: ref,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 40
     },
     __self: undefined
   }))),
@@ -2764,7 +2764,7 @@ const tableIcons = {
     ref: ref,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 41
     },
     __self: undefined
   }))),
@@ -2772,7 +2772,7 @@ const tableIcons = {
     ref: ref,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 42
     },
     __self: undefined
   }))),
@@ -2780,7 +2780,7 @@ const tableIcons = {
     ref: ref,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 43
     },
     __self: undefined
   }))),
@@ -2788,7 +2788,7 @@ const tableIcons = {
     ref: ref,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 44
     },
     __self: undefined
   }))),
@@ -2796,7 +2796,7 @@ const tableIcons = {
     ref: ref,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 45
     },
     __self: undefined
   })))
@@ -2892,6 +2892,11 @@ class Index extends react__WEBPACK_IMPORTED_MODULE_11__["Component"] {
             "horasalida": date
           }];
           console.log("Es una acualizacion a la columna " + usertmp);
+          const action = {
+            type: "UPD_REG_PONTO",
+            payload: aupdate[0]
+          };
+          this.props.dispatch(action);
           this.setState(prevState => {
             const data = [...prevState.data];
             data[data.indexOf(usertmp)] = aupdate[0];

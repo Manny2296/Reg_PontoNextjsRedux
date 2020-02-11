@@ -218,7 +218,7 @@ class userprofile extends Component {
       
       //console.log('ppar if' + this.state.image_user )
       return (
-        <img style={imgstyle}  src={(this.state.imagePreviewUrl !== null)? this.state.imagePreviewUrl :  this.URL_IMAGE_COMMON + this.state.image_user}/>
+        <img style={imgstyle}  src={(this.state.imagePreviewUrl !== null)? this.state.imagePreviewUrl : require('../../components/image/images.png')}/>
 
 
       )

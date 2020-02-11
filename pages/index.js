@@ -1,13 +1,10 @@
 import Link from "next/link";
-
 import Layout from "../components/Layout";
 import { forwardRef } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { connect } from 'react-redux'
-
 import { Button, Box, TextField} from "@material-ui/core";
 import React, { Component } from 'react';
-
 import "../components/index.scss"
 import "../components/Table.scss"
 import MaterialTable from 'material-table';
@@ -111,8 +108,11 @@ class Index extends Component {
         if( usuario_a_batir[usuario_a_batir.length-1].ndoc == this.state.ndocUser && (usuario_a_batir[usuario_a_batir.length-1].horasalida =="--------" )||usuario_a_batir[usuario_a_batir.length-1].horasalida =="" ){
           let usertmp =  usuario_a_batir[usuario_a_batir.length-1]
           let aupdate =[{"name": usertmp.name, "ndoc": usertmp.ndoc,"horaingreso":usertmp.horaingreso, "horasalida":date}] 
+          
           console.log("Es una acualizacion a la columna " + usertmp)
-           this.setState(prevState => {
+          const action = { type: "UPD_REG_PONTO", payload: aupdate[0]}
+          this.props.dispatch(action)
+          this.setState(prevState => {
             const data = [...prevState.data];
             data[data.indexOf(usertmp)] = aupdate[0];
             return { ...prevState, data };
